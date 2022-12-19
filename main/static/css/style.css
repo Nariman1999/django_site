@@ -1,0 +1,432 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(178.14deg, #E2ECF4 53.45%, #6f9ac3 148.84%);
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+}
+#fon_img {
+    position: fixed;
+    width: 65%;
+    top: 200px;
+    left: 20%;
+    z-index: -9999;
+}
+
+/* ----------------------------------- nav --------------------------------------- */
+
+nav {
+    width: 100%;
+    overflow: hidden;
+    background-color: #31566a;
+    color: white;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+nav .nav_left {
+    float: left;
+    text-align: center;
+    margin: 0 0 0 4%;
+    float: left;
+}
+nav .nav_left img {
+    width: 50px;
+    height: 45px;
+    margin-right:10px;
+    
+}
+nav .nav_left h4 {
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    float: right;
+    padding-top:10px;
+    text-shadow: 5px 5px 4px rgb(87, 89, 221);
+}
+nav .nav_right {
+    float: right;
+    display: flex;
+    margin-right:3%;
+}
+nav .nav_right a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 10px 10px 15px;
+    transition: all 0.3s;
+    text-shadow: 0px 11px 3px rgb(178, 186, 255);
+}
+nav .nav_right a:hover {
+    background-color: #a7bdbc;
+    color: #212529;
+    transition: all 0.3s;
+}
+nav .nav_right .active {
+    background-color: #a7bdbc;
+    color: #212529;
+    transition: all 0.3s;
+}
+/* --------------------------------- main_left ----------------------------------- */
+
+.main_left {
+    position: relative;
+    top:130px;
+    left: 2%;
+    width: 50%;
+    float: left;
+}
+.main_left.main_left_index_2 {
+    width: 32%;
+}
+.main_left .table_list{
+    transition: all 0.3s;
+}
+.main_left .table_list:hover{
+    background-color: #d9d9ff;
+    transition: all 0.3s;
+}
+.main_left h5 {
+    margin: 0 0 20px 10px;
+    padding:20px 0 0 10px;
+    font-size:20px;
+}
+.main_left .main_list {
+    /* border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black; */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* background-color: #e4eaf4; */
+    overflow: hidden;
+    transition: all 0.3s;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main_left .main_list:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.main_left .main_list:last-child {
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.main_left .main_list:hover {
+    background-color: #8fa3c7;
+    transition: all 0.3s;
+}
+.main_left .main_list a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1em;
+    float: left;
+    width: 94%;
+    padding: 5px 12px;
+}
+.main_left .main_list .div_icon {
+    float: right;
+    width: 6%;
+    padding: 5.5px 10px 6.7px 7px;
+    cursor: pointer;
+}
+.main_left .main_list img{
+    width: 8px;
+}
+.main_left .main_list_div {
+    /* border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black; */
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    transition: all 0.3s;
+    padding-left: 30px;
+}
+.main_left .main_list_div:hover {
+    background-color: #dadada;
+    transition: all 0.3s;
+}
+.main_left .main_list_div a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1em;
+    float: left;
+    width: 100%;
+    padding: 5px 12px;
+}
+
+/* ------------------------------------------ main_right ------------------------------------------ */
+
+.main_right {
+    position: relative;
+    margin-left: 4%;
+    top: 130px;
+    right:15px;
+    display: flex;
+    justify-content: end;
+}
+/* .main_right_index2{
+    width: 62%;
+} */
+/* .main_right .reclama {
+    
+} */
+.main_right .reclama .reclama_item {
+    width: 200px;
+    height: 190px;
+    transition: all 0.3s;
+    opacity: 0.95;
+    margin-bottom:10px;
+    padding:10px 5px 50px 5px;
+    overflow:hidden;
+}
+
+.main_right .reclama .reclama_item:hover  {
+    background-color: #d9d9ff;
+    border-radius: 10px;
+    transition: all 0.3s;
+    opacity: 1;
+}
+.main_right .reclama h5 {
+    font-size: 20px;
+    text-align: center;
+}
+.main_right .reclama .reclama_item  img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+}
+.main_right .reclama .reclama_item  img:hover {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+    border-radius: 10px;
+}
+
+.main_right .reclama .reclama_item a p {
+    font-size: 15px;
+   
+}
+
+
+
+
+.dohods{
+    position: relative;
+    top:130px;
+    background-color: #445b75;
+    color:#fff;
+    padding:10px
+}
+.table_dohod{
+    width: 40% !important;
+}
+.dohod_id{
+    width:35px;
+}
+
+@media only screen and (max-width: 768px){
+    .table_dohod{
+        width: 100% !important;
+    }
+    .dohod_id{
+        width:20px;
+    }
+    .dohod_data{
+        width:110px
+    }
+    .main_right{
+        display: none;
+        
+    }
+    .main_left{
+        width: 100%;
+        margin-right:10px;
+    }
+    .profcom_right{
+        width: 100% !important;
+        margin:0 !important;
+        padding:0 !important;
+    }
+
+    
+}
+
+
+/*--------------------------------- profcom ------------------------------------*/
+
+
+
+.profcom_left {
+    position: relative;
+    top:130px;
+    left: 2%;
+    width: 38%;
+    float: left;
+}
+
+.profcom_left h4 {
+    margin: 0 0 20px 10px;
+}
+.profcom_left .profcom_list {
+    background-color: rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    transition: all 0.3s;
+    font-weight: 500;
+    margin-top:5px;
+    font-family:Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.profcom_left .profcom_list:hover{
+    background-color: #8fa3c7;
+    transition: all 0.3s;
+    
+}
+.profcom_left .profcom_list a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1em;
+    float: left;
+    padding: 5px 12px;
+}
+.profcom_left .profcom_list .div_date {
+    float: right;
+    padding: 5.5px 10px 6.7px 7px;
+  
+}
+
+
+
+/*-------------------  profcom_right---------------------*/
+
+.profcom_right {
+    top: 130px;
+    position: relative;
+    margin-left: 16.7%;
+    width: 66%;
+    border-top:2px solid silver;
+}
+.profcom_right .block_right a{
+    float:left;
+    margin-left:20px;
+}
+.profcom_right .block_right .div_date{
+    float:right;
+    margin-right:20px;
+}
+.profcom_right p{
+    width:90%;
+    padding:6px 10px 6px 18px;
+    margin-top:35px;
+    margin-left:40px;
+    background-color: #C9E5FE;
+}
+
+
+
+/*--------------------  slaider -------------------------*/
+
+/* стили основного контейнера слайдера */
+.slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* стили для обёртки, в которой заключены слайды */
+.slider__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+/* стили для контейнера слайдов */
+.slider__items {
+  display: flex;
+  height:400px;
+  transition: transform 0.6s ease;
+}
+/* стили для слайдов */
+.slider__item {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.slider__item img{
+  width:100%;
+  height: auto;
+}
+/* стили для кнопок "вперед" и "назад" */
+.slider__control {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  opacity: 0.7;
+  height: 50px;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+}
+.slider__control:hover,
+.slider__control:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: 0.9;
+}
+.slider__control_prev {
+  left: 30;
+ 
+}
+.slider__control_next {
+  right: 0;
+}
+.slider__control::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+.slider__control_prev::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+.slider__control_next::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+/* стили для индикаторов */
+.slider__indicators {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin: 0 15%;
+  list-style: none;
+}
+.slider__indicators li {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 4px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-clip: padding-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.slider__indicators li.active {
+  background-color: #fff;
+}

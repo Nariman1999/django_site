@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href ="{% static 'css/style.css' %}">
+    <link rel = "stylesheet" href ="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+</head>
+<body >
+    <img src="{% static 'main/img/fon.svg' %}" id="fon_img">
+    <nav>
+        <div class="nav_left">
+            <img   class="papah" src="{% static 'main/img/icon_pt.png' %}" >
+            <h4>Qarapapah tərəkəmə</h4>
+        </div>
+        <div class="nav_right">
+            
+            <a class="nav_list_item {% if request.get_full_path == '/'  %} active {% endif %} " href="{% url 'index' %}">Главная</a>
+            <a class="nav_list_item {% if request.get_full_path == '/novosti/'  %} active {% endif %}" href="{% url 'novosti' %}">Новости</a>
+            <a class="nav_list_item {% if request.get_full_path == '/dohod/'  %} active {% endif %}" href="{% url 'dohod' %}">Доходы</a>
+            <a class="nav_list_item {% if request.get_full_path == '/rashods/'  %} active {% endif %}" href="{% url 'rashods' %}">Расходы</a>
+        </div>
+       
+    </nav>
+    {% block content %}
+    
+    {% endblock %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+   
+</body>
+</html>

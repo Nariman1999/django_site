@@ -1,0 +1,91 @@
+{% extends "main/wrapper.html" %}
+
+{% block content %}
+{% load static %}
+    <div style="position: absolute;top:13%; right:8%">
+      
+ 
+    </div>
+<div class="profcom_right">
+           
+    <div class="block_right ">
+        <a >{{ novosts.title }} </a>  
+        <div class="div_date">{{ novosts.date_time }}</div>
+    </div>
+    <p>{{ novosts.text }}</p>
+    <div class="slider">
+        <div class="slider__wrapper">
+            <div class="slider__items">
+                {% if novosts.image0 %}
+                <div class="slider__item">
+                    <img src="{{ novosts.image0.url  }}" alt="foto" style="height: 400px;width:700px">
+                </div>
+                {% endif %}
+                {% if novosts.image1%}
+                <div class="slider__item">
+                    <img src="{{ novosts.image1.url  }}" alt="foto" style="height: 400px;width:700px">
+                </div>
+                {% endif %}
+                {% if novosts.image2%}
+                <div class="slider__item">
+                    <img src="{{ novosts.image2.url  }}" alt="foto" style="height: 400px;width:700px">
+                </div>
+                {% endif %}
+                {% if novosts.image3 %}
+                <div class="slider__item">
+                    <img src="{{ novosts.image3.url  }}" alt="foto" style="height: 400px;width:700px">
+                </div>
+                {% endif %}
+                {% if novosts.image4 %}
+                <div class="slider__item">
+                    <img src="{{ novosts.image4.url  }}" alt="foto" style="height: 400px;width:700px">
+                </div>
+                {% endif %}
+                {% if novosts.image5 %}
+                <div class="slider__item">
+                    <img src="{{ novosts.image5.url  }}" alt="foto" style="height: 400px;width:700px">
+                </div>
+                {% endif %}
+                {% if novosts.image6 %}
+                <div class="slider__item">
+                    <img src="{{ novosts.image6.url  }}" alt="foto" style="height: 400px;width:700px">
+                </div>
+                {% endif %}
+                {% if novosts.image7 %}
+                <div class="slider__item">
+                    <img src="{{ novosts.image7.url  }}" alt="foto" style="height: 400px;width:700px">
+                </div>
+                {% endif %}
+                {% if novosts.image8 %}
+                <div class="slider__item">
+                    <img src="{{ novosts.image8.url  }}" alt="foto" style="height: 400px;width:700px">
+                </div>
+                {% endif %}
+                {% if novosts.image9 %}
+                <div class="slider__item">
+                    <img src="{{ novosts.image9.url  }}" alt="foto" style="height: 400px;width:700px">
+                </div>
+                {% endif %}
+               
+              
+                
+            </div>
+        </div> 
+            {% if novosts.image0 or novosts.image1 or novosts.image2 or novosts.image3 or novosts.image4 or novosts.image5 or novosts.image6 or novosts.image7 or novosts.image8 or novosts.image9%} 
+                <a class="slider__control slider__control_prev" href="#" role="button"></a>
+                <a class="slider__control slider__control_next slider__control_show" href="#" role="button"></a>
+            {% endif %}
+    </div> 
+    <br>
+ 
+    <script>
+        slideShow('.slider', {
+          isAutoplay: true
+        });
+    </script>
+</div>
+
+
+  
+
+{% endblock %}

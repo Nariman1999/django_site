@@ -1,0 +1,59 @@
+{% extends "main/wrapper.html" %}
+
+{% block content %}
+{% load static %}
+<style>
+    @media print {
+      nav, .main_right, #fon_img, #print_window {
+        display: none;
+      }
+      .main_left {
+        width: 94%;
+        margin: -100px auto 0 auto;
+      }
+    }
+    .active_year{
+      color: brown;
+    }
+  </style>
+<div class="container  dohods">
+    <h4>Расходы</h4>
+    <br>
+    <table class="table  table_dohod" >
+        <thead>
+            <tr>
+                <th scope="col" style=" font-size:1.1em;" width="250px">Общая сумма :</th>
+                <th scope="col" ><span style="color:rgb(49, 255, 93); font-size:1.1em;">{{ itogo }}</span> сом</th>
+            </tr>
+            <tr>
+                <th scope="col">Все расходы     : </th>
+                <th scope="col"><span  style="color:rgb(255, 115, 115)">{{ ras }}</span> сом</th>
+            </tr>
+        </thead>
+    </table>
+    <br>
+    <table class="table mt-4">
+        <thead>
+          <tr>
+            <th scope="col" width="35px">#</th>
+            <th scope="col" >Дата</th>
+            <th scope="col">Все расходы:</th>
+            <th scope="col">Сумма (сом)</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for i in rashods %}
+            <tr>
+                <th scope="row">1</th>
+                <td > {{ i.date|date:"d/m/Y" }}</td>
+                <td>{{ i.rashod }}</td>
+                <td style="color:rgb(255, 115, 115)">{{ i.summr }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+      <button class="btn btn-success" id="print_window" onclick="window.print()">Печать</button>
+
+</div>
+
+{% endblock %}

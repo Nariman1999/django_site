@@ -1,0 +1,63 @@
+{% extends "main/wrapper.html" %}
+
+{% block content %}
+{% load static %}
+<style>
+    @media print {
+      nav, .main_right, #fon_img, #print_window {
+        display: none;
+      }
+      .main_left {
+        width: 94%;
+        margin: -100px auto 0 auto;
+      }
+    }
+    .active_year{
+      color: brown;
+    }
+  </style>
+<div class="container  dohods">
+    <h4>Доходы</h4>
+    <br>
+    <table class="table_dohod table " >
+        <thead>
+            <tr>
+                <th scope="col" style=" font-size:1.1em;" width="250px">Общая сумма:</th>
+                <th scope="col" ><span style="color:rgb(49, 255, 93); font-size:1.1em;">{{ itogo }}</span> сом</th>
+            </tr>
+            <tr>
+                <th scope="col">Общий фонд за все годы:</th>
+                <th scope="col"><span style="color:rgb(115, 255, 145)">{{ summ }}</span> сом  </th>
+            </tr>
+            <tr>
+                <th scope="col">Другие доходы:</th>
+                <th scope="col" ><span style="color:rgb(115, 255, 145)">{{ drugiy }}</span> сом</th>
+            </tr>
+        </thead>
+    </table>
+    <br>
+    <table class="table mt-4">
+        <thead>
+          <tr>
+            <th scope="col"  class="dohod_id">#</th>
+            <th scope="col" class="dohod_data">Дата</th>
+            <th scope="col">Другие доходы:</th>
+            <th scope="col">Сумма (сом)</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for i in dohods %}
+            <tr>
+                <th scope="row">1</th>
+                <td > {{ i.date|date:"d/m/Y" }}г</td>
+                <td>{{ i.otkogo }}</td>
+                <td style="color:rgb(115, 255, 145)">{{ i.summa }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+      <button class="btn btn-success" id="print_window" onclick="window.print()">Печать</button>
+
+</div>
+
+{% endblock %}

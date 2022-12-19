@@ -1,0 +1,30 @@
+{% extends "main/wrapper.html" %}
+
+{% block content %}
+{% load static %}
+<style>
+    .hover_now:hover{
+        background-color: aquamarine;
+        color:rgb(91, 18, 173)
+    }
+</style>
+    <div style="position: absolute;top:13%; right:8%">
+        <a  href="{% url 'document' %}">Все документы</a>
+ 
+    </div>
+
+<div class="profcom_right"  style="background-color: #445b75;color:white; padding:25px"  >
+    <h4>Все новости </h4>
+    <div class="list-group">
+        {% for novost in novosts %}
+        <a href="{% url 'detail_novosti' novost.id %}" class="list-group-item list-group-item-action hover_now">
+          {{ novost.title }} <span style="float: right;">  {{ novost.date_time }}</span>
+        </a>
+        {% endfor %}
+        </div>
+</div>
+
+
+  
+
+{% endblock %}

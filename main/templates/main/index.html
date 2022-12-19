@@ -1,0 +1,93 @@
+{% extends "main/wrapper.html" %}
+
+{% block content %}
+{% load static %}
+
+<style>
+  @media print {
+    nav, .main_right, #fon_img, #print_window {
+      display: none;
+    }
+    .main_left {
+      width: 94%;
+      margin: -100px auto 0 auto;
+    }
+  }
+  .active_year{
+    color: brown;
+  }
+</style>
+
+<div class="main_left" style="background-color: rgb(221, 242, 245);">
+    <h5>Общий фонд</h5>  
+    <a class=" {% if request.get_full_path == '/' %}active_year{% endif %}" href="{% url 'index'  %}">2022г</a> |
+    <a class=" {% if request.get_full_path == '/2023' %}active_year{% endif %}" href="{% url 'index3' 2023 %}">2023г</a> |
+    <a class=" {% if request.get_full_path == '/2024' %}active_year{% endif %}" href="{% url 'index3' 2024 %}">2024г</a> |
+    <a class=" {% if request.get_full_path == '/2025' %}active_year{% endif %}" href="{% url 'index3' 2025 %}">2025г</a> |
+    <a class=" {% if request.get_full_path == '/2026' %}active_year{% endif %}" href="{% url 'index3' 2026 %}">2026г</a> |
+
+    <table class="table table-bordered ">
+    <thead class="" style="background-color: #445b75;color:white;">
+      <tr >
+        <th scope="col" style="text-align: center;">#</th>
+        <th scope="col">ФИО</th>
+        <th scope="col" style="text-align: center;">Сдал</th>
+        <th scope="col" style="text-align: center;">Остал</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for val in articles %}
+        
+        <tr class="table_list">
+            <th scope="row" style="text-align: center;">{{ forloop.counter }}</th>
+            <td>{{val.name}}</td>
+            <td style="text-align: center;">{{val.sdal}}</td>
+            <td style="text-align: center;">{{val.ostatok}}</td>
+        </tr>
+      {% endfor %}  
+      <tr>
+        <th scope="row"></th>
+        <td> </td> 
+        <td></td>
+        <td></td>
+    </tr>
+    <thead style="background-color: #445b75;color:white;">
+      <tr  class="table_list " >
+          <th scope="row" colspan="2" style="text-align: center;">Сумма :</th>
+          <th style="text-align: center;">{{ summ }}</th>
+          <th style="text-align: center;">{{ ost }}</th>
+      </tr>
+    </thead>
+    </tbody>
+  </table>
+  <button class="btn btn-success" id="print_window" onclick="window.print()">Печать</button>
+</div>
+
+
+
+<div class="main_right">
+    <div class="reclama">
+        <h5>Новости</h5>
+        {% for novost in novosts %}
+        {% if novost.image0 %}
+         
+            <div class="reclama_item ">
+              <a href="{% url 'novosti' %}" style="text-decoration: none; color:rgb(21, 0, 139)">
+                <img src="{{ novost.image0.url }}">
+                <p>{{ novost.text|truncatechars:35 }}</p>
+              </a>
+            </div>
+         
+            {% endif %}
+        {% endfor %}
+      
+        <!-- <div class="reclama_item">
+            <img src="{% static 'main/img/rec_1.jpg' %}">
+            <p>Продаю ноутбук</p>
+        </div> -->
+    </div>
+</div>
+ 
+
+
+{% endblock %}
